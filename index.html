@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anurag Maurya</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+    :root {
+        --bs-body-tertiary-bg: rgba(225, 0, 255, 0.572);
+        /* Change the color to purple */
+    }
+
+    .bg-body-tertiary {
+        --bs-bg-opacity: 1;
+        background-color: var(--bs-body-tertiary-bg) !important;
+    }
+
+    .w-100 {
+        width: 100% !important;
+        height: 325px;
+    }
+
+    @media (min-width: 500px) {
+        .w-100 {
+            width: 100% !important;
+            height: 600px;
+        }
+    }
+
+    .row-cols-2>* {
+        flex: 0 0 auto;
+        width: 50%;
+        height: 100px;
+    }
+
+    @media (min-width: 50em) {
+        .mntl-taxonomysc-article-list-group .mntl-card-list.mntl-card-list {
+            grid-gap: 1.875rem;
+        }
+    }
+
+    @media (min-width: 65em) {
+        @supports (display: grid) {
+            .mntl-card-list {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    }
+
+    @media (min-width: 54em) {
+        @supports (display: grid) {
+            .mntl-card-list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+
+    @media (min-width: 35em) {
+        @supports (display: grid) {
+            .mntl-card-list {
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+        }
+
+        .mntl-card-list {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    @supports (display: grid) {
+        .mntl-card-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 1rem;
+        }
+    }
+
+    .mntl-card-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    blockquote,
+    body,
+    div,
+    figure,
+    footer,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    header,
+    html,
+    iframe,
+    label,
+    legend,
+    li,
+    nav,
+    object,
+    ol,
+    p,
+    section,
+    table,
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    div {
+        display: block;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        font-family: "Libre Baskerville", Verdana, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: #355340;
+    }
+
+    html {
+        height: 100%;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+
+
+    .mntl-card-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: center;
+}
+
+
+.card-body{
+    background: #403cff7d;
+}
+
+</style>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About me</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Link
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://www.google.com">Google</a></li>
+                            <li><a class="dropdown-item" href="https://www.instagram.com">Instagram</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="https://www.facebook.com">Facebook</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Link</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                    <div class="mx-1">
+                       <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">Login</button>
+                       <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">SignUp</button> 
+
+                    </div>
+            </div>
+        </div>
+    </nav>
+
+
+  
+  <!-- SignUpModal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="loginModalLabel">Anurag Maurya,s Website</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+    
+                <div class="container111">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+                  <hr>
+                  <form action="register.php" method="post">
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" required><br>
+              
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required><br>
+              
+                  <label for="psw-repeat"><b>Repeat Password</b></label>
+                  <input type="password" placeholder="Repeat Password" name="psw-repeat" required><br>
+              
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                  </label>
+              
+                  <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+              
+                  <div class="clearfix">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                  </div>
+                </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  <!--Login Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Anurag Maurya,s Website</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+     <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <picture>
+    <div class="container-fluid">
+        <div id="carouselExampleDark" class="carousel carousel-dark carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000"> <!-- Adjusted interval to 5 seconds -->
+                    <img src="krista-mangulsone-9gz3wfHr65U-unsplash.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color: rgb(196, 255, 19);">Let's learn about some dog and cat breeds</h5>
+                        <button class="btn btn-danger">Cat</button>
+                        <button class="btn btn-danger">Dog</button>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000"> <!-- Adjusted interval to 5 seconds -->
+                    <img src="the-lucky-neko-uePn9YCTCY0-unsplash.jpg" class="d-block w-100" alt="Reload This Page">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color: rgb(185, 0, 163);">Let's learn about some dog and cat breeds</h5>
+                        <button class="btn btn-danger">Cat</button>
+                        <button class="btn btn-danger">Dog</button>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000"> <!-- Adjusted interval to 5 seconds -->
+                    <img src="kote-puerto-so5nsYDOdxw-unsplash.jpg" class="d-block w-100" alt="Reload this page">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Let's learn about some dog and cat breeds</h5>
+                        <button class="btn btn-danger">Cat</button>
+                        <button class="btn btn-danger">Dog</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" ariahidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</picture>
+
+
+
+
+<div class="card text-center">
+    <div class="card-header">
+      Featured
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Search on Google</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go to the Top</a>
+    </div>
+    <div class="card-footer text-body-secondary">
+    </div>
+  </div>
+
+
+
+    <div id="mntl-taxonomysc-article-list_1-0"
+        class="comp mntl-taxonomysc-article-list mntl-document-card-list mntl-card-list mntl-block" data-docid="4162034"
+        data-chunk="36">
+        <a id="mntl-card-list-items_1-0"
+            class="comp new-card new-card--compressed mntl-card-list-items mntl-document-card mntl-card card card--no-image"
+            data-doc-id="7368497" data-tax-levels="" href="https://www.thesprucepets.com/pet-friendly-wineries-7368497"
+            data-cta="Read Now ▸" data-ordinal="1">
+            <div class="loc card__top">
+                <div class="card__media mntl-universal-image universal-image__container">
+                    <img data-src="https://www.thesprucepets.com/thmb/TFPWnOwFWJ8Z-3h0Bnf4M8HipVQ=/315x236/filters:no_upscale():strip_icc():format(webp)/GettyImages-1225780729-1022683bc9a44e09853b9c672ff2fa6f.jpg"
+                        width="315" height="236" alt="Dog winery" class="card__img universal-image__image lazyloaded"
+                        src="https://www.thesprucepets.com/thmb/TFPWnOwFWJ8Z-3h0Bnf4M8HipVQ=/315x236/filters:no_upscale():strip_icc():format(webp)/GettyImages-1225780729-1022683bc9a44e09853b9c672ff2fa6f.jpg">
+                    <noscript>
+                        <img src="https://www.thesprucepets.com/thmb/TFPWnOwFWJ8Z-3h0Bnf4M8HipVQ=/315x236/filters:no_upscale():strip_icc():format(webp)/GettyImages-1225780729-1022683bc9a44e09853b9c672ff2fa6f.jpg"
+                            width="315" height="236" class="img--noscript card__img universal-image__image"
+                            alt="Dog winery" />
+                    </noscript>
+                </div>
+            </div>
+            <div class="card__content " data-tag="Dogs">
+                <div class="card__header"></div>
+                <span class="card__title"><span class="card__title-text ">Exploring Pet-Friendly Wineries: Types,
+                        Locations, and More</span></span>
+                <div class="card__byline mntl-card__byline " data-byline="Missy Schrott Boylan"></div>
+            </div>
+        </a>
+        <a id="mntl-card-list-items_1-0-1"
+            class="comp new-card new-card--compressed mntl-card-list-items mntl-document-card mntl-card card card--no-image"
+            data-doc-id="7369820" data-tax-levels=""
+            href="https://www.thesprucepets.com/exploring-the-different-types-of-pet-friendly-beaches-7369820"
+            data-cta="Read Now ▸" data-ordinal="2">
+            <div class="loc card__top">
+                <div class="card__media mntl-universal-image universal-image__container">
+                    <img data-src="https://www.thesprucepets.com/thmb/3KVSsn8eDUT0MG7e4nRcBTpwv2o=/315x236/filters:no_upscale():strip_icc():format(webp)/GettyImages-1324127388-e91921216bf84985abfaebdcb81dd6cb.jpg"
+                        width="315" height="236" alt="Pet-friendly beaches "
+                        class="card__img universal-image__image lazyloaded"
+                        src="https://www.thesprucepets.com/thmb/3KVSsn8eDUT0MG7e4nRcBTpwv2o=/315x236/filters:no_upscale():strip_icc():format(webp)/GettyImages-1324127388-e91921216bf84985abfaebdcb81dd6cb.jpg">
+                    <noscript>
+                        <img src="https://www.thesprucepets.com/thmb/3KVSsn8eDUT0MG7e4nRcBTpwv2o=/315x236/filters:no_upscale():strip_icc():format(webp)/GettyImages-1324127388-e91921216bf84985abfaebdcb81dd6cb.jpg"
+                            width="315" height="236" class="img--noscript card__img universal-image__image"
+                            alt="Pet-friendly beaches " />
+                    </noscript>
+                </div>
+            </div>
+            <div class="card__content " data-tag="Dogs">
+                <div class="card__header"></div>
+                <span class="card__title"><span class="card__title-text ">Exploring the Different Types of Pet-Friendly
+                        Beaches </span></span>
+                <div class="card__byline mntl-card__byline " data-byline="Missy Schrott Boylan"></div>
+            </div>
+        </a>
+        <a id="mntl-card-list-items_1-0-2"
+            class="comp new-card new-card--compressed mntl-card-list-items mntl-document-card mntl-card card card--no-image"
+            data-doc-id="5076203" data-tax-levels=""
+            href="https://www.thesprucepets.com/how-to-treat-vestibular-disease-in-dogs-5076203" data-cta="Read Now ▸"
+            data-ordinal="3">
+            <div class="loc card__top">
+                <div class="card__media mntl-universal-image universal-image__container">
+                    <img data-src="https://www.thesprucepets.com/thmb/yXk9t1hgJuutULsEdVit50UImKE=/315x236/filters:no_upscale():strip_icc():format(webp)/dog-lying-on-sofa-at-home--looking-ill-and-sad-1164779474-c2a3a1a9dcbf47a5a68512918f22d900.jpg"
+                        width="315" height="236" alt="Dog lying on sofa at home, looking ill and sad"
+                        class="card__img universal-image__image lazyloaded"
+                        src="https://www.thesprucepets.com/thmb/yXk9t1hgJuutULsEdVit50UImKE=/315x236/filters:no_upscale():strip_icc():format(webp)/dog-lying-on-sofa-at-home--looking-ill-and-sad-1164779474-c2a3a1a9dcbf47a5a68512918f22d900.jpg">
+                    <noscript>
+                        <img src="https://www.thesprucepets.com/thmb/yXk9t1hgJuutULsEdVit50UImKE=/315x236/filters:no_upscale():strip_icc():format(webp)/dog-lying-on-sofa-at-home--looking-ill-and-sad-1164779474-c2a3a1a9dcbf47a5a68512918f22d900.jpg"
+                            width="315" height="236" class="img--noscript card__img universal-image__image"
+                            alt="Dog lying on sofa at home, looking ill and sad" />
+                    </noscript>
+                </div>
+            </div>
+            <div class="card__content " data-tag="Dog Treatments">
+                <div class="card__header"></div>
+                <span class="card__title"><span class="card__title-text ">Vestibular Disease in Dogs</span></span>
+                <div class="card__byline mntl-card__byline " data-byline="Jenna Stregowski"></div>
+            </div>
+        </a>
+        <a id="mntl-card-list-items_1-0-3"
+            class="comp new-card new-card--compressed mntl-card-list-items mntl-document-card mntl-card card card--no-image"
+            data-doc-id="5075796" data-tax-levels=""
+            href="https://www.thesprucepets.com/how-to-treat-impetigo-in-dogs-5075796" data-cta="Read Now ▸"
+            data-ordinal="4">
+            <div class="loc card__top">
+                <div class="card__media mntl-universal-image universal-image__container">
+                    <img data-src="https://www.thesprucepets.com/thmb/kc9uq7F509MOzmZNKQPbgMXtrDM=/315x236/filters:no_upscale():strip_icc():format(webp)/BulldogPuppy-6e41129e2f8d44afba459d1c900d0ff3.jpg"
+                        width="315" height="236" alt="Brindle &amp; White Bulldog Puppy"
+                        class="card__img universal-image__image lazyloaded"
+                        src="https://www.thesprucepets.com/thmb/kc9uq7F509MOzmZNKQPbgMXtrDM=/315x236/filters:no_upscale():strip_icc():format(webp)/BulldogPuppy-6e41129e2f8d44afba459d1c900d0ff3.jpg">
+                    <noscript>
+                        <img src="https://www.thesprucepets.com/thmb/kc9uq7F509MOzmZNKQPbgMXtrDM=/315x236/filters:no_upscale():strip_icc():format(webp)/BulldogPuppy-6e41129e2f8d44afba459d1c900d0ff3.jpg"
+                            width="315" height="236" class="img--noscript card__img universal-image__image"
+                            alt="Brindle &amp; White Bulldog Puppy" />
+                    </noscript>
+                </div>
+            </div>
+            <div class="card__content " data-tag="Dog Treatments">
+                <div class="card__header"></div>
+                <span class="card__title"><span class="card__title-text ">Pyoderma in Dogs</span></span>
+                <div class="card__byline mntl-card__byline " data-byline="Liz Waynick"></div>
+            </div>
+        </a>
+        <a id="mntl-card-list-items_1-0-4"
+            class="comp new-card new-card--compressed mntl-card-list-items mntl-document-card mntl-card card card--no-image"
+            data-doc-id="5075199" data-tax-levels=""
+            href="https://www.thesprucepets.com/how-to-treat-gastritis-in-dogs-5075199" data-cta="Read Now ▸"
+            data-ordinal="5">
+            <div class="loc card__top">
+                <div class="card__media mntl-universal-image universal-image__container">
+                    <img data-src="https://www.thesprucepets.com/thmb/wdY63AinwT4XoZM9PLKOaITnMek=/315x236/filters:no_upscale():strip_icc():format(webp)/PugCounterSurfing-008d54aa24a345bca825136669dbfd3d.jpg"
+                        width="315" height="236" alt="Pug eating food off the table"
+                        class="card__img universal-image__image lazyloaded"
+                        src="https://www.thesprucepets.com/thmb/wdY63AinwT4XoZM9PLKOaITnMek=/315x236/filters:no_upscale():strip_icc():format(webp)/PugCounterSurfing-008d54aa24a345bca825136669dbfd3d.jpg">
+                    <noscript>
+                        <img src="https://www.thesprucepets.com/thmb/wdY63AinwT4XoZM9PLKOaITnMek=/315x236/filters:no_upscale():strip_icc():format(webp)/PugCounterSurfing-008d54aa24a345bca825136669dbfd3d.jpg"
+                            width="315" height="236" class="img--noscript card__img universal-image__image"
+                            alt="Pug eating food off the table" />
+                    </noscript>
+                </div>
+            </div>
+            <div class="card__content " data-tag="Dog Diseases &amp; Disorders">
+                <div class="card__header"></div>
+                <span class="card__title"><span class="card__title-text ">Gastritis in Dogs</span></span>
+                <div class="card__byline mntl-card__byline " data-byline="Liz Waynick"></div>
+            </div>
+        </a>
+        <a id="mntl-card-list-items_1-0-5"
+            class="comp new-card new-card--compressed mntl-card-list-items mntl-document-card mntl-card card card--no-image"
+            data-doc-id="5074909" data-tax-levels="" href="https://www.thesprucepets.com/dexamethasone-for-dogs-5074909"
+            data-cta="Read Now ▸" data-ordinal="6">
+            <div class="loc card__top">
+                <div class="card__media mntl-universal-image universal-image__container">
+                    <img data-src="https://www.thesprucepets.com/thmb/ASEDBdECIs1idlV0neeJP7wZpuU=/315x236/filters:no_upscale():strip_icc():format(webp)/GettyImages-1174828595-1198bbf2dccd46a285e018ed28bcfcc0.jpg"
+                        width="315" height="236" alt="pet dog and the vet"
+                        class="card__img universal-image__image lazyloaded"
+                        src="https://www.thesprucepets.com/thmb/ASEDBdECIs1idlV0neeJP7wZpuU=/315x236/filters:no_upscale():strip_icc():format(webp)/GettyImages-1174828595-1198bbf2dccd46a285e018ed28bcfcc0.jpg">
+                    <noscript>
+                        <img src="https://www.thesprucepets.com/thmb/ASEDBdECIs1idlV0neeJP7wZpuU=/315x236/filters:no_upscale():strip_icc():format(webp)/GettyImages-1174828595-1198bbf2dccd46a285e018ed28bcfcc0.jpg"
+                            width="315" height="236" class="img--noscript card__img universal-image__image"
+                            alt="pet dog and the vet" />
+                    </noscript>
+                </div>
+            </div>
+            <div class="card__content " data-tag="Dog Treatments">
+                <div class="card__header"></div>
+                <span class="card__title"><span class="card__title-text ">Dexamethasone for Dogs</span></span>
+                <div class="card__byline mntl-card__byline " data-byline="Tabitha Kucera"></div>
+            </div>
+        </a>
+        <a id="mntl-card-list-items_1-0-6"
+            class="comp new-card new-card--compressed mntl-card-list-items mntl-document-card mntl-card card card--no-image"
+            data-doc-id="5079745" data-tax-levels=""
+            href="https://www.thesprucepets.com/cavapoo-full-profile-history-and-care-5079745" data-cta="Read Now ▸"
+            data-ordinal="7">
+            <div class="loc card__top">
+                <div class="card__media mntl-universal-image universal-image__container">
+                    <img data-src="https://www.thesprucepets.com/thmb/IAAzkbQVDNupjwyn24KYUeWJkJk=/315x236/filters:no_upscale():strip_icc():format(webp)/GettyImages-1324286255-eb3ee5beac9346f7a74e2f9430d48a13.jpg"
+                        width="315" height="236" alt="Standing side profile of a cavapoo dog"
+                        class="card__img universal-image__image lazyloaded"
+                        src="https://www.thesprucepets.com/thmb/IAAzkbQVDNupjwyn24KYUeWJkJk=/315x236/filters:no_upscale():strip_icc():format(webp)/GettyImages-1324286255-eb3ee5beac9346f7a74e2f9430d48a13.jpg">
+                    <noscript>
+                        <img src="https://www.thesprucepets.com/thmb/IAAzkbQVDNupjwyn24KYUeWJkJk=/315x236/filters:no_upscale():strip_icc():format(webp)/GettyImages-1324286255-eb3ee5beac9346f7a74e2f9430d48a13.jpg"
+                            width="315" height="236" class="img--noscript card__img universal-image__image"
+                            alt="Standing side profile of a cavapoo dog" />
+                    </noscript>
+                </div>
+            </div>
+            <div class="card__content " data-tag="Hybrid Dog Breeds">
+                <div class="card__header"></div>
+                <span class="card__title"><span class="card__title-text ">Cavapoo: Dog Breed Characteristics &amp;
+                        Care</span></span>
+                <div class="card__byline mntl-card__byline " data-byline="Liz Waynick"></div>
+            </div>
+        </a>
+        <a id="mntl-card-list-items_1-0-7"
+            class="comp new-card new-card--compressed mntl-card-list-items mntl-document-card mntl-card card card--no-image"
+            data-doc-id="5077715" data-tax-levels=""
+            href="https://www.thesprucepets.com/griffon-nivernais-full-profile-history-and-care-5077715"
+            data-cta="Read Now ▸" data-ordinal="8">
+            <div class="loc card__top">
+                <div class="card__media mntl-universal-image universal-image__container">
+                    <img data-src="https://www.thesprucepets.com/thmb/rIuRKeN_IvesEIVsyh5WXrO4sOU=/315x236/filters:no_upscale():strip_icc():format(webp)/GriffonNivernais-8a7754cfcfff41e9a67837b2cc633f0e.jpg"
+                        width="315" height="236" alt="several Griffon Nivernais dogs in a field"
+                        class="card__img universal-image__image lazyloaded"
+                        src="https://www.thesprucepets.com/thmb/rIuRKeN_IvesEIVsyh5WXrO4sOU=/315x236/filters:no_upscale():strip_icc():format(webp)/GriffonNivernais-8a7754cfcfff41e9a67837b2cc633f0e.jpg">
+                    <noscript>
+                        <img src="https://www.thesprucepets.com/thmb/rIuRKeN_IvesEIVsyh5WXrO4sOU=/315x236/filters:no_upscale():strip_icc():format(webp)/GriffonNivernais-8a7754cfcfff41e9a67837b2cc633f0e.jpg"
+                            width="315" height="236" class="img--noscript card__img universal-image__image"
+                            alt="several Griffon Nivernais dogs in a field" />
+                    </noscript>
+                </div>
+            </div>
+            <div class="card__content " data-tag="Hound Dog Breeds">
+                <div class="card__header"></div>
+                <span class="card__title"><span class="card__title-text ">Griffon Nivernais: Dog Breed Characteristics
+                        &amp; Care</span></span>
+                <div class="card__byline mntl-card__byline " data-byline="Liz Waynick"></div>
+            </div>
+        </a>
+
+    </div>
+    <!-- <div class="card__content " data-tag="Toy Dog Breeds">
+        <div class="card__header"></div>
+        <span class="card__title"><span class="card__title-text ">10 Best Small Dog Breeds for Limited
+                Space</span></span>
+        <div class="card__byline mntl-card__byline " data-byline="Jenna Stregowski"></div>
+    </div>
+    </a>
+    <a id="mntl-card-list-items_1-0-43"
+        class="comp new-card new-card--compressed mntl-card-list-items mntl-document-card mntl-card card card--no-image"
+        data-doc-id="3385164" data-tax-levels="" href="https://www.thesprucepets.com/when-to-put-a-dog-down-3385164"
+        data-cta="Read Now ▸" data-ordinal="44">
+        <div class="loc card__top">
+            <div class="card__media mntl-universal-image universal-image__container">
+                <img data-src="https://www.thesprucepets.com/thmb/9Cis3z0ddF7-qt3wIFz5G5mokhQ=/315x236/filters:no_upscale():strip_icc():format(webp)/GettyImages-83326617-32813d6782d3442aacd699f5d6953233.jpg"
+                    width="315" height="236" alt="Girl hugging old dog"
+                    class="card__img universal-image__image lazyloaded"
+                    src="https://www.thesprucepets.com/thmb/9Cis3z0ddF7-qt3wIFz5G5mokhQ=/315x236/filters:no_upscale():strip_icc():format(webp)/GettyImages-83326617-32813d6782d3442aacd699f5d6953233.jpg"> -->
+                <!-- <noscript>
+                    <img src="https://www.thesprucepets.com/thmb/9Cis3z0ddF7-qt3wIFz5G5mokhQ=/315x236/filters:no_upscale():strip_icc():format(webp)/GettyImages-83326617-32813d6782d3442aacd699f5d6953233.jpg"
+                        width="315" height="236" class="img--noscript card__img universal-image__image"
+                        alt="Girl hugging old dog" />
+                </noscript>
+            </div>
+        </div>
+        <div class="card__content " data-tag="Dog Loss &amp; Grief">
+            <div class="card__header"></div>
+            <span class="card__title"><span class="card__title-text ">How to Know When It's Time to Put Your Dog
+                    Down</span></span>
+            <div class="card__byline mntl-card__byline " data-byline="Melissa Murray"></div>
+        </div>
+    </a>
+    <a id="mntl-card-list-items_1-0-44"
+        class="comp new-card new-card--compressed mntl-card-list-items mntl-document-card mntl-card card card--no-image"
+        data-doc-id="1118393" data-tax-levels=""
+        href="https://www.thesprucepets.com/how-to-clean-your-dogs-ears-1118393" data-cta="Read Now ▸"
+        data-ordinal="45">
+        <div class="loc card__top">
+
+            <noscript>
+                <img src="https://www.thesprucepets.com/thmb/jKQIuy1Ub3S7YT1vUCGLuJlhLSw=/315x236/filters:no_upscale():strip_icc():format(webp)/cleaning-dog-ears-481993518-587e6a333df78c17b6ab7a7d.jpg"
+                    width="315" height="236" class="img--noscript card__img universal-image__image"
+                    alt="Cleaning dog ears" />
+            </noscript> -->
+        </div>
+        </div>
+        <!-- <div class="card__content " data-tag="Dog Grooming">
+            <div class="card__header"></div>
+
+            <img src="https://www.thesprucepets.com/thmb/rzfdR7q-56_XmgJtv7VB_fuCcD8=/315x236/filters:no_upscale():strip_icc():format(webp)/boxer-dog-670472130-aa00740b42db464886b93a4bf677707d.jpg"
+                width="315" height="236" class="img--noscript card__img universal-image__image" alt="Boxer Dog" />
+            </noscript>
+        </div>
+        </div>
+        <div class="card__content " data-tag="Dog Diseases &amp; Disorders">
+            <div class="card__header"></div>
+            <span class="card__title"><span class="card__title-text ">Entropion in Dogs</span></span>
+            <div class="card__byline mntl-card__byline " data-byline="Jenna Stregowski"></div>
+        </div> -->
+    </a>
+    <div id="mntl-card-list__bottom_1-0" class="comp mntl-card-list__bottom mntl-block"></div>
+    </div>
+
+    <a href="https://instagram.com/i_am_anurag_maurya?igshid=MzRlODBiNWFlZA=="> <!-- Replace "https://example.com" with the URL you want to link to -->
+        <img src="https://th.bing.com/th/id/OIP.SVHHNDrztjc98ZQ8XdZZ4wHaC4?w=310&h=135&c=7&r=0&o=5&dpr=1.1&pid=1.7" class="img-thumbnail" alt="...">
+    </a>
+    
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
